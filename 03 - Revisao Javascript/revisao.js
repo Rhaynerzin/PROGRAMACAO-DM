@@ -81,3 +81,54 @@ console.log(frutas)
     const { peso, altura } = pessoa
     console.log(peso)
     console.log(altura)
+
+    // Propagação de Objeto
+    const endereco = {
+        cidade: "Brasília",
+        uf: "DF"
+    }
+
+    const pessoaCompleto = {
+        ...pessoa,
+        ...endereco
+    }
+
+    console.log(pessoaCompleto)
+
+    // Funções
+
+    function somar(numA, numB) {
+        const resultado = numA + numB
+        console.log(resultado)
+    }
+
+    //Uso
+    somar(2,2)
+    somar(3,3)
+    somar(10,5)
+
+    // Função Anônima
+    const subtrair = function (numA, numB){
+        const resultado = numA - numB
+        console.log(resultado)
+    }
+
+    subtrair(4,2)
+
+    //Arrow Function
+    const multiplicar = (numA, numB) => numA * numB
+    multiplicar(2,2)
+
+    // importar uma função de outro arquivo
+
+    // No padrão do node sem projeto não funciona
+    // o import por modulos, tem que utilizar o module.exports
+    // Mas esse formato é o que vamos utilizar nos projetos
+    import { calcularIMC } from "./CalculadoraIMC"
+
+    // Modo de import padrão no node
+    // const calculadoraIMC = require("./CalculadoraIMC")
+
+    const res = calcularIMC(80, 170)
+
+    console.log(res)
