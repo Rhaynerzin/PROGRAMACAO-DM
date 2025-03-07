@@ -1,13 +1,12 @@
 //1
 
-let numeros = ["1", "2", "3"];
+let numeros = ["10", "20", "30", "40", "50"];
     console.log(numeros[0]);
-    numeros.push("4");
-    console.log(numeros.length);
+    numeros.push("60");
+    console.log(numeros);
 
 //2
 
-let numeros2 = ["1", "2", "3"];
-    console.log(numeros2[0]);
-    numeros2.shift("4");
+let numeros2 = ["10", "20", "30", "40", "50"];
+    numeros2.shift();
     console.log(numeros2);
