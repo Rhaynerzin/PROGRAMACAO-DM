@@ -21,7 +21,7 @@ export default function App() {
       {/* Código javascript */}
       <Text>{2 + 2}</Text>
       <Text>{nome}</Text>
-      <Text>Meu aplicativo RODANDO!!! Vai Flamengo!!!</Text>
+      <Text>NEYMAAAAAAAAAAAAAAAAAAAAAAAAAR!!!</Text>
 
       <Button title='Alerta' onPress={alerta} ></Button>
 
