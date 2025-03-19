@@ -15,6 +15,7 @@ export default function App() {
 
   // Retorno com JSX
   return (
+    <ScrollView>
     <View style={styles.container}>
       <StatusBar style="auto" />
       {/* Comentário dentro do template JSX */}
@@ -34,14 +35,23 @@ export default function App() {
       />
 
     </View>
+
+    </ScrollView>
   );
 }
 
+// Estilos
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 50
   },
+  textoGrande: {
+    fontSize: 50,
+    fontWeight: 900,
+    fontStyle: 'italic'
+  }
 });
