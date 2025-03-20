@@ -1,42 +1,55 @@
-// Imports
+// imports dos componentes e libs
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, ScrollView } from 'react-native';
 
-// Componente principal
-// Ele deve retornar o que será renderizado na tela (Template feito com JSX)
+// função principal do componente
 export default function App() {
-  // Lógica do meu componente
+  // lógica do meu componente
   const nome = "Rhayner"
 
   function alerta() {
-    alert("Você clicou no botão")
+    alert('Clicou no Botão!!!')
   }
 
-  // Retorno com JSX
+  // retorno é um código JSX (Template) do que vai ser
+  // renderizado na tela
   return (
     <ScrollView>
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      {/* Comentário dentro do template JSX */}
-      {/* Código javascript */}
-      <Text>{2 + 2}</Text>
-      <Text>{nome}</Text>
-      <Text>NEYMAAAAAAAAAAAAAAAAAAAAAAAAAR!!!</Text>
 
-      <Button title='Alerta' onPress={alerta} ></Button>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
 
-      <Image 
-        source={{ uri: 'https://i.pinimg.com/736x/47/e7/fd/47e7fd39f8e5a44877234f1d3c7bf1dc.jpg' }}
-        style={{
-          height: 300,
-          width: 300
-        }}
-      />
+        <Text style={{ fontSize: 40 }} >MEU TEXTO</Text>
+        <Text style={{ fontSize: 40 }} >{nome}</Text>
+        <Text style={styles.textoGrande} >Open up App.js to start working on your app!</Text>
 
-    </View>
+        <Button title='ENVIAR' onPress={alerta} ></Button>
 
-    </ScrollView>
+        <Image
+          source={{
+            uri: 'https://i.pinimg.com/736x/47/e7/fd/47e7fd39f8e5a44877234f1d3c7bf1dc.jpg'
+          }}
+          style={{
+            height: 300,
+            width: 300
+          }}
+        />
+
+        <Image
+          source={require('./imagens/image.png')}
+          style={{
+            height: 300,
+            width: 300
+          }}
+        />
+        
+
+
+      </View>
+
+
+    </ScrollView>    
   );
 }
 
