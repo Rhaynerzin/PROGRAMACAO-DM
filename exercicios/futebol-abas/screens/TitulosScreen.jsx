@@ -3,20 +3,44 @@ import { View, Text, FlatList, StyleSheet } from 'react-native'
 
 const titulos = [
   {
-    nome: "Campeonato Brasileiro",
-    anos: [1980, 1982, 1983, 1992, 2009, 2019, 2020]
+    nome: "Copa do Mundo de Clubes da FIFA",
+    anos: [2009, 2011, 2015]
   },
   {
-    nome: "Copa Libertadores da América",
-    anos: [1981, 2019, 2022]
+    nome: "Liga dos Campeões da UEFA",
+    anos: [1992, 2006, 2009, 2011, 2015]
   },
   {
-    nome: "Copa do Brasil",
-    anos: [1990, 2006, 2013, 2022, 2024]
+    nome: "Recopa Europeia da UEFA",
+    anos: [1979, 1982, 1989, 1997]
   },
   {
-    nome: "Supercopa do Brasil",
-    anos: [2020, 2021, 2025]
+    nome: "Supercopa da UEFA",
+    anos: [1992, 1997, 2009, 2011, 2015]
+  },
+  {
+    nome: "Taça Latina",
+    anos: [1949, 1952]
+  },
+  {
+    nome: "La Liga",
+    anos: [1929, 1945, 1948, 1949, 1952, 1953, 1959, 1960, 1974, 1985, 1991, 1992, 1993, 1994, 1998, 2005, 2006, 2009, 2010, 2011, 2013, 2015, 2016, 2018, 2019, 2023]
+  },
+  {
+    nome: "Copa do Rei",
+    anos: [1910, 1912, 1913, 1920, 1922, 1925, 1926, 1928, 1942, 1951, 1952, 1953, 1957, 1959, 1963, 1968, 1971, 1978, 1981, 1983, 1988, 1990, 1997, 1998, 2009, 2012, 2015, 2016, 2017, 2021]
+  },
+  {
+    nome: "Supercopa da Espanha",
+    anos: [	1983, 1991, 1992, 1994, 1996, 2005, 2006, 2009, 2010, 2011, 2013, 2016, 2018, 2023, 2025]
+  },
+  {
+    nome: "Copa da Liga Espanhola",
+    anos: [1983, 1986]
+  },
+  {
+    nome: "Copa Eva Duarte",
+    anos: [1949, 1952, 1953]
   },
 ]
 
@@ -40,7 +64,7 @@ export default function TitulosScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: '#000000',
     padding: 10
   },
   card: {
@@ -55,10 +79,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: 'white'
+    color: '#edbb00'
   },
   anos: {
     fontSize: 16,
-    color: 'white'
+    color: '#edbb00'
   }
 })

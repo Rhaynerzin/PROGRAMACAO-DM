@@ -3,29 +3,29 @@ import { View, Text, FlatList, Image, StyleSheet } from 'react-native'
 
 const jogadores = [
   {
-    nome: "Lionel Messi",
-    numero: 10,
-    imagem: "https://i.pinimg.com/736x/63/94/f6/6394f64a00b5e19cc2485b69f2ea7ac4.jpg"
+    nome: "Robert Lewandowski",
+    numero: 9,
+    imagem: "https://i.pinimg.com/736x/7a/de/a9/7adea9e8f1940d9401deb66f82309f23.jpg"
   },
   {
-    nome: "Romário",
+    nome: "Raphinha",
     numero: 11,
-    imagem: "https://i.pinimg.com/736x/e6/d0/1a/e6d01a57b86a43aef2e71194ce30187d.jpg"
+    imagem: "https://i.pinimg.com/736x/d7/f1/0b/d7f10b46656fb2baaf1c0d0e354ec8e2.jpg"
   },
   {
-    nome: "Everton Ribeiro",
-    numero: 7,
-    imagem: "https://i.pinimg.com/236x/39/1a/27/391a275fb7e0b018f2900f0f9fc9331b.jpg"
+    nome: "Pedri",
+    numero: 8,
+    imagem: "https://i.pinimg.com/736x/56/fd/4a/56fd4a53efe5bb075e1cb64e010cf8d2.jpg"
   },
   {
-    nome: "David Luiz",
-    numero: 23,
-    imagem: "https://i.pinimg.com/474x/98/79/9b/98799b86107a87b79dc9b15cf778fa4a.jpg"
+    nome: "Lamine Yamal",
+    numero: 19,
+    imagem: "https://i.pinimg.com/736x/85/16/4b/85164b4269b348093834d286dd390849.jpg"
   },
   {
-    nome: "Pedro",
-    numero: 21,
-    imagem: "https://i.pinimg.com/474x/79/e6/18/79e6185649fa3667b3ed3beef3e1ae94.jpg"
+    nome: "Wojciech Szczęsny",
+    numero: 25,
+    imagem: "https://i.pinimg.com/736x/a7/2a/12/a72a12f66ea4cf77f9bb18140c6a315a.jpg"
   },
 ]
 
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: 'black'
+    backgroundColor: '#000000'
   },
   card: {
     flexDirection: 'row',
@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
   nome: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: 'white'
+    color: '#edbb00'
   },
   numero: {
     fontSize: 16,
-    color: 'white'
+    color: '#edbb00'
   }
 })

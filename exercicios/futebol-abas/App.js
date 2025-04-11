@@ -22,7 +22,7 @@ export default function App() {
             options={{
               title: 'Escudo',
               headerTitleAlign: 'center',
-              headerTintColor: 'white',
+              headerTintColor: '#edbb00',
               headerStyle: {
                 backgroundColor: '#004D98'
               },
@@ -36,7 +36,7 @@ export default function App() {
             options={{
               title: 'Jogadores',
               headerTitleAlign: 'center',
-              headerTintColor: 'white',
+              headerTintColor: '#edbb00',
               headerStyle: {
                 backgroundColor: '#004D98'
               },
@@ -50,7 +50,7 @@ export default function App() {
             options={{
               title: 'Títulos',
               headerTitleAlign: 'center',
-              headerTintColor: 'white',
+              headerTintColor: '#edbb00',
               headerStyle: {
                 backgroundColor: '#004D98'
               },

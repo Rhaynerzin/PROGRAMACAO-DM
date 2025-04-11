@@ -20,14 +20,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#000000',
     padding: 20
   },
   nome: {
     fontSize: 28,
     fontWeight: 'bold',
     marginBottom: 20,
-    color: 'white'
+    color: '#edbb00'
   },
   escudo: {
     width: 300,
