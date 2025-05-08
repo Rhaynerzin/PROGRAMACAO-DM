@@ -1,21 +1,43 @@
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Provider as PaperProvider } from 'react-native-paper';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import EscudoScreen from './screens/EscudoScreen';
+import JogadoresScreen from './screens/JogadoresScreen';
+import TitulosScreen from './screens/TitulosScreen';
+
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <NavigationContainer>
+        <Drawer.Navigator
+          initialRouteName="Escudo"
+          screenOptions={({ route }) => ({
+            drawerIcon: ({ color, size }) => {
+              let iconName;
+
+              if (route.name === 'Escudo') {
+                iconName = 'shield';
+              } else if (route.name === 'Jogadores') {
+                iconName = 'people';
+              } else if (route.name === 'Títulos') {
+                iconName = 'trophy';
+              }
+
+              return <Ionicons name={iconName} size={size} color={color} />;
+            },
+          })}
+        >
+          <Drawer.Screen name="Escudo" component={EscudoScreen} />
+          <Drawer.Screen name="Jogadores" component={JogadoresScreen} />
+          <Drawer.Screen name="Títulos" component={TitulosScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
