@@ -7,6 +7,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import CarList from '../screens/CarList';
 import CarForm from '../screens/CarForm';
 import Dashboard from '../screens/Dashboard';
+import ExternalCarList from '../screens/ExternalCarList';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -20,6 +21,18 @@ function CarStack() {
   );
 }
 
+function ExternalCarStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="ExternalCarList"
+        component={ExternalCarList}
+        options={{ title: 'Lista de Montadoras' }}
+      />
+    </Stack.Navigator>
+  );
+}
+
 export default function AppNavigator() {
   return (
     <NavigationContainer>
@@ -29,6 +42,7 @@ export default function AppNavigator() {
             let iconName;
             if (route.name === 'Carros') iconName = 'directions-car';
             else if (route.name === 'Dashboard') iconName = 'dashboard';
+            else if (route.name === 'Lista de Montadoras') iconName = 'factory';
             return <MaterialIcons name={iconName} size={size} color={color} />;
           },
           headerShown: false,
@@ -36,6 +50,7 @@ export default function AppNavigator() {
       >
         <Tab.Screen name="Carros" component={CarStack} />
         <Tab.Screen name="Dashboard" component={Dashboard} />
+        <Tab.Screen name="Lista de Montadoras" component={ExternalCarStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
